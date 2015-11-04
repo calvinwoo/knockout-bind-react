@@ -1,0 +1,30 @@
+{
+  "name": "knockout-bind-react",
+  "version": "1.0.0",
+  "description": "A custom binding for KnockoutJS that renders a given ReactJS component within the specified element. Use when adding React components to an application that is KnockoutJS heavy, such as one that employs the Durandal framework.",
+  "main": "knockout-bind-react.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calvinwoo/knockout-bind-react.git"
+  },
+  "keywords": [
+    "knockout",
+    "react",
+    "durandal",
+    "knockoutjs",
+    "reactjs",
+    "durandaljs",
+    "bind",
+    "binder",
+    "component"
+  ],
+  "author": "Calvin Woo <calvinwoo32@gmail.com> (http://calvinwoo.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calvinwoo/knockout-bind-react/issues"
+  },
+  "homepage": "https://github.com/calvinwoo/knockout-bind-react"
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://fb.me/react-0.14.2.min.js"></script>
+    <script src="https://fb.me/react-dom-0.14.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+
+    <script src="./knockout-bind-react.js"></script>
+  </head>
+
+  <body>
+    <div>
+      Text:
+      <input data-bind="textInput: text" />
+    </div>
+
+    <div>
+      Color:
+      <input data-bind="textInput: color" />
+    </div>
+
+    <div data-bind="react: options"></div>
+
+    <script type="text/babel">
+      var Button = React.createClass({
+        render: function () {
+          return (
+            <button style={{color: this.props.color}}>
+              {this.props.text}
+            </button>
+          );
+        }
+      });
+
+      var ViewModel = function() {
+        self = this;
+
+        self.text = ko.observable('Button');
+        self.color = ko.observable('red');
+
+        self.options = ko.computed(function () {
+          return {
+            component: Button,
+            props: {
+              text: self.text(),
+              color: self.color()
+            },
+            callback: function (componentInstance) {
+              console.log('Component Updated:');
+              console.log(componentInstance);
+            }
+          }
+        });
+      };
+
+      ko.applyBindings(new ViewModel());
+    </script>
+  </body>
+</html>

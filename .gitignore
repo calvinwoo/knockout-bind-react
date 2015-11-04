@@ -1,0 +1,5 @@
+.DS_Store
+
+# VIM Backup Files
+*.swp
+*.swo

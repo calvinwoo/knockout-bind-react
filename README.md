@@ -42,4 +42,4 @@ var viewModel = {
 };
 ```
 
-See [example.html](https://github.com/calvinwoo/knockout-bind-react/blob/master/README.md) for a more detailed and dynamic usage.
+See [example.html](https://github.com/calvinwoo/knockout-bind-react/blob/master/example.html) for a more detailed and dynamic usage.

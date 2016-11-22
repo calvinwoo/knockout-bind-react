@@ -6,7 +6,7 @@
   } else {
     factory(root.ko, root.React);
   }
-}(this, function (ko, React) {
+}(this, function (ko, ReactD) {
   ko.bindingHandlers.react = {
     init: function () {
       return {
@@ -20,12 +20,9 @@
       if (options && options.component) {
         var componentInstance = React.render(
           React.createElement(options.component, options.props),
-          element
+          element,
+          options.callback
         );
-
-        if (options.callback) {
-          options.callback(componentInstance);
-        }
       }
     }
   };

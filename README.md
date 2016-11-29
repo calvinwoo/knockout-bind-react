@@ -2,11 +2,6 @@
 A custom binding for KnockoutJS that renders a given ReactJS component within the specified element. Use when adding React components to an application that is KnockoutJS heavy, such as one that employs the Durandal framework.
 
 ### Installation
-```
-bower install knockout-bind-html
-```
-
-or
 
 ```
 npm install knockout-bind-react

@@ -1,12 +1,12 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
-    define(['knockout', 'react'], factory);
+    define(['knockout', 'react', 'react-dom'], factory);
   } else if (typeof exports === 'object') {
-    module.exports = factory(require('knockout'), require('react'));
+    module.exports = factory(require('knockout'), require('react'), require('react-dom'));
   } else {
-    factory(root.ko, root.React);
+    factory(root.ko, root.React, root.ReactDOM);
   }
-}(this, function (ko, React) {
+}(this, function (ko, React, ReactDOM) {
   ko.bindingHandlers.react = {
     init: function () {
       return {
@@ -18,7 +18,7 @@
       var options = ko.unwrap(valueAccessor());
 
       if (options && options.component) {
-        var componentInstance = React.render(
+        var componentInstance = ReactDOM.render(
           React.createElement(options.component, options.props),
           element
         );

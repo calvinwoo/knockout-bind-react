@@ -20,8 +20,6 @@ The `react` binding expects one value, an object containing the various options 
 
 * component: The desired React component
 * props: An object containing the props to be passed into the the React component
-* callback: A callback function that's executed every time the the component is rendered.
-The React Component instance is passed as an argument.
 
 ```html
 <div data-bind="react: reactOptions"><div>
@@ -34,9 +32,6 @@ var viewModel = {
 			props: {
 				color: 'red',
 				type: 'primary'
-			},
-			callback: function (componentInstance) {
-				console.log('Button Rendered!')
 			}
 	};
 };

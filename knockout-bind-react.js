@@ -22,10 +22,6 @@
           React.createElement(options.component, options.props),
           element
         );
-
-        if (options.callback) {
-          options.callback(componentInstance);
-        }
       }
     }
   };

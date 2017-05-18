@@ -1,6 +1,6 @@
 {
   "name": "knockout-bind-react",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A custom binding for KnockoutJS that renders a given ReactJS component within the specified element. Use when adding React components to an application that is KnockoutJS heavy, such as one that employs the Durandal framework.",
   "main": "knockout-bind-react.js",
   "scripts": {

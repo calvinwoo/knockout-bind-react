@@ -22,6 +22,10 @@
           React.createElement(options.component, options.props),
           element
         );
+        
+        if (options.ref) {
+          options.ref(componentInstance);
+        }
       }
     }
   };

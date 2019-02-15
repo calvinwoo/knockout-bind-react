@@ -1,5 +1,5 @@
 # knockout-bind-react
-A custom binding for KnockoutJS that renders a given ReactJS component within the specified element. Use when adding React components to an application that is KnockoutJS heavy, such as one that employs the Durandal framework.
+A custom binding for KnockoutJS that renders a given ReactJS component within the specified element.
 
 ### Installation
 
@@ -32,4 +32,4 @@ var viewModel = {
 };
 ```
 
-See [the example page](http://calvinwoo.github.io/knockout-bind-react/) for a more detailed and dynamic usage.
+See `index.html`, [or this example page](http://calvinwoo.github.io/knockout-bind-react/), for more detailed and dynamic usage.
